@@ -1,0 +1,808 @@
+{
+  "asOf": "2026-10-19",
+  "persona": {
+    "id": "long-phan",
+    "name": "Long Phan",
+    "age": 25,
+    "sex": "male",
+    "heightCm": 172,
+    "occupation": "Frontend Developer",
+    "location": "Ho Chi Minh City, Vietnam",
+    "programStartDate": "2026-08-24",
+    "about": "Works long hours at a desk. Started a wellness plan 8 weeks ago to move more, sleep better and lose a few kilograms. Does yoga on Tuesdays and runs on Saturdays.",
+    "dietPreference": "Pescatarian",
+    "device": "Fitness band + phone app"
+  },
+  "goals": {
+    "dailySteps": 8000,
+    "weeklyActiveMinutes": 150,
+    "sleepHours": 7.5,
+    "dailyProteinG": 90,
+    "dailyWaterL": 2,
+    "targetWeightKg": 60,
+    "startWeightKg": 64.8,
+    "targetDate": "2026-12-31"
+  },
+  "notTracked": ["blood pressure", "blood glucose", "lab test results", "medications", "stress or mood"],
+  "daily": [
+    {
+      "date": "2026-08-24",
+      "steps": 5021,
+      "activeMinutes": 5,
+      "sleepHours": 6.4,
+      "restingHeartRate": 73,
+      "caloriesIn": 1886,
+      "proteinG": 74,
+      "waterL": 1.5,
+      "weightKg": 64.8
+    },
+    {
+      "date": "2026-08-25",
+      "steps": 5592,
+      "activeMinutes": 11,
+      "sleepHours": 6.5,
+      "restingHeartRate": 71,
+      "caloriesIn": 2012,
+      "proteinG": 71,
+      "waterL": 1.6,
+      "weightKg": null
+    },
+    {
+      "date": "2026-08-26",
+      "steps": 4161,
+      "activeMinutes": 6,
+      "sleepHours": 6.3,
+      "restingHeartRate": 73,
+      "caloriesIn": 1700,
+      "proteinG": 66,
+      "waterL": 1.2,
+      "weightKg": null
+    },
+    {
+      "date": "2026-08-27",
+      "steps": 5262,
+      "activeMinutes": 13,
+      "sleepHours": 6.6,
+      "restingHeartRate": 71,
+      "caloriesIn": 1948,
+      "proteinG": 69,
+      "waterL": 1.4,
+      "weightKg": null
+    },
+    {
+      "date": "2026-08-28",
+      "steps": 5593,
+      "activeMinutes": 13,
+      "sleepHours": 5.8,
+      "restingHeartRate": 71,
+      "caloriesIn": 1698,
+      "proteinG": 64,
+      "waterL": 1.2,
+      "weightKg": null
+    },
+    {
+      "date": "2026-08-29",
+      "steps": 7867,
+      "activeMinutes": 28,
+      "sleepHours": 7.6,
+      "restingHeartRate": 72,
+      "caloriesIn": 2024,
+      "proteinG": 67,
+      "waterL": 1.6,
+      "weightKg": null
+    },
+    {
+      "date": "2026-08-30",
+      "steps": 7457,
+      "activeMinutes": 31,
+      "sleepHours": 7.6,
+      "restingHeartRate": 73,
+      "caloriesIn": 2089,
+      "proteinG": 58,
+      "waterL": 1.2,
+      "weightKg": null
+    },
+    {
+      "date": "2026-08-31",
+      "steps": 6005,
+      "activeMinutes": 13,
+      "sleepHours": 6.6,
+      "restingHeartRate": 72,
+      "caloriesIn": 1684,
+      "proteinG": 68,
+      "waterL": 1.4,
+      "weightKg": 64.5
+    },
+    {
+      "date": "2026-09-01",
+      "steps": 4659,
+      "activeMinutes": 11,
+      "sleepHours": 5.8,
+      "restingHeartRate": 70,
+      "caloriesIn": 1956,
+      "proteinG": 55,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-02",
+      "steps": 5036,
+      "activeMinutes": 16,
+      "sleepHours": 6.4,
+      "restingHeartRate": 71,
+      "caloriesIn": 1839,
+      "proteinG": 64,
+      "waterL": 1.4,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-03",
+      "steps": 5321,
+      "activeMinutes": 15,
+      "sleepHours": 6.5,
+      "restingHeartRate": 72,
+      "caloriesIn": 2011,
+      "proteinG": 74,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-04",
+      "steps": 5402,
+      "activeMinutes": 15,
+      "sleepHours": 6.3,
+      "restingHeartRate": 72,
+      "caloriesIn": 1967,
+      "proteinG": 57,
+      "waterL": 1.4,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-05",
+      "steps": 8933,
+      "activeMinutes": 41,
+      "sleepHours": 7.2,
+      "restingHeartRate": 71,
+      "caloriesIn": 2202,
+      "proteinG": 71,
+      "waterL": 1.3,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-06",
+      "steps": 7690,
+      "activeMinutes": 29,
+      "sleepHours": 7.1,
+      "restingHeartRate": 71,
+      "caloriesIn": 1892,
+      "proteinG": 72,
+      "waterL": 1.6,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-07",
+      "steps": 6198,
+      "activeMinutes": 22,
+      "sleepHours": 6,
+      "restingHeartRate": 70,
+      "caloriesIn": 1908,
+      "proteinG": 58,
+      "waterL": 1.2,
+      "weightKg": 64.2
+    },
+    {
+      "date": "2026-09-08",
+      "steps": 6484,
+      "activeMinutes": 27,
+      "sleepHours": 5.8,
+      "restingHeartRate": 72,
+      "caloriesIn": 2029,
+      "proteinG": 60,
+      "waterL": 1.4,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-09",
+      "steps": 6029,
+      "activeMinutes": 14,
+      "sleepHours": 6.1,
+      "restingHeartRate": 70,
+      "caloriesIn": 1988,
+      "proteinG": 60,
+      "waterL": 1.7,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-10",
+      "steps": 5958,
+      "activeMinutes": 19,
+      "sleepHours": 6,
+      "restingHeartRate": 72,
+      "caloriesIn": 1828,
+      "proteinG": 56,
+      "waterL": 1.4,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-11",
+      "steps": 5427,
+      "activeMinutes": 12,
+      "sleepHours": 6.3,
+      "restingHeartRate": 69,
+      "caloriesIn": 1915,
+      "proteinG": 71,
+      "waterL": 1.2,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-12",
+      "steps": null,
+      "activeMinutes": null,
+      "sleepHours": null,
+      "restingHeartRate": null,
+      "caloriesIn": null,
+      "proteinG": null,
+      "waterL": null,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-13",
+      "steps": 8864,
+      "activeMinutes": 44,
+      "sleepHours": 7.1,
+      "restingHeartRate": 70,
+      "caloriesIn": 1990,
+      "proteinG": 65,
+      "waterL": 1.7,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-14",
+      "steps": 7294,
+      "activeMinutes": 30,
+      "sleepHours": 6.5,
+      "restingHeartRate": 69,
+      "caloriesIn": 1767,
+      "proteinG": 66,
+      "waterL": 1.4,
+      "weightKg": 63.9
+    },
+    {
+      "date": "2026-09-15",
+      "steps": 6993,
+      "activeMinutes": 29,
+      "sleepHours": 6.1,
+      "restingHeartRate": 69,
+      "caloriesIn": 1896,
+      "proteinG": 69,
+      "waterL": 1.7,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-16",
+      "steps": 7293,
+      "activeMinutes": 21,
+      "sleepHours": 6.2,
+      "restingHeartRate": 71,
+      "caloriesIn": 2003,
+      "proteinG": 67,
+      "waterL": 1.7,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-17",
+      "steps": 7184,
+      "activeMinutes": 32,
+      "sleepHours": 6.5,
+      "restingHeartRate": 70,
+      "caloriesIn": 1696,
+      "proteinG": 72,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-18",
+      "steps": 6208,
+      "activeMinutes": 14,
+      "sleepHours": 6.4,
+      "restingHeartRate": 69,
+      "caloriesIn": 1737,
+      "proteinG": 69,
+      "waterL": 1.7,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-19",
+      "steps": 8805,
+      "activeMinutes": 31,
+      "sleepHours": 7.6,
+      "restingHeartRate": 71,
+      "caloriesIn": 2160,
+      "proteinG": 61,
+      "waterL": 1.6,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-20",
+      "steps": 9578,
+      "activeMinutes": 43,
+      "sleepHours": 6.9,
+      "restingHeartRate": 69,
+      "caloriesIn": 1879,
+      "proteinG": 76,
+      "waterL": 1.2,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-21",
+      "steps": 7019,
+      "activeMinutes": 23,
+      "sleepHours": 6.1,
+      "restingHeartRate": 68,
+      "caloriesIn": 1718,
+      "proteinG": 72,
+      "waterL": 1.3,
+      "weightKg": 63.5
+    },
+    {
+      "date": "2026-09-22",
+      "steps": 6286,
+      "activeMinutes": 18,
+      "sleepHours": 6.1,
+      "restingHeartRate": 69,
+      "caloriesIn": 1962,
+      "proteinG": 73,
+      "waterL": 1.4,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-23",
+      "steps": 6633,
+      "activeMinutes": 18,
+      "sleepHours": 5.8,
+      "restingHeartRate": 69,
+      "caloriesIn": 2018,
+      "proteinG": 69,
+      "waterL": 1.3,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-24",
+      "steps": 7643,
+      "activeMinutes": 30,
+      "sleepHours": 6.4,
+      "restingHeartRate": 68,
+      "caloriesIn": 1981,
+      "proteinG": 65,
+      "waterL": 1.7,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-25",
+      "steps": 6346,
+      "activeMinutes": 24,
+      "sleepHours": 6.3,
+      "restingHeartRate": 69,
+      "caloriesIn": 2055,
+      "proteinG": 75,
+      "waterL": 1.6,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-26",
+      "steps": 9384,
+      "activeMinutes": 45,
+      "sleepHours": 7.4,
+      "restingHeartRate": 70,
+      "caloriesIn": 1969,
+      "proteinG": 69,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-27",
+      "steps": 8732,
+      "activeMinutes": 31,
+      "sleepHours": 7.2,
+      "restingHeartRate": 70,
+      "caloriesIn": 2212,
+      "proteinG": 58,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-28",
+      "steps": 6716,
+      "activeMinutes": 23,
+      "sleepHours": 6.3,
+      "restingHeartRate": 69,
+      "caloriesIn": 1861,
+      "proteinG": 71,
+      "waterL": 1.3,
+      "weightKg": 63.3
+    },
+    {
+      "date": "2026-09-29",
+      "steps": 6895,
+      "activeMinutes": 21,
+      "sleepHours": 6,
+      "restingHeartRate": 68,
+      "caloriesIn": 2026,
+      "proteinG": 63,
+      "waterL": 1.4,
+      "weightKg": null
+    },
+    {
+      "date": "2026-09-30",
+      "steps": 8115,
+      "activeMinutes": 26,
+      "sleepHours": 6.2,
+      "restingHeartRate": 68,
+      "caloriesIn": 2000,
+      "proteinG": 62,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-01",
+      "steps": 7797,
+      "activeMinutes": 31,
+      "sleepHours": 6.4,
+      "restingHeartRate": 68,
+      "caloriesIn": 1678,
+      "proteinG": 77,
+      "waterL": 1.7,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-02",
+      "steps": 8084,
+      "activeMinutes": 38,
+      "sleepHours": 6.4,
+      "restingHeartRate": 69,
+      "caloriesIn": 1799,
+      "proteinG": 62,
+      "waterL": 1.7,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-03",
+      "steps": null,
+      "activeMinutes": null,
+      "sleepHours": null,
+      "restingHeartRate": null,
+      "caloriesIn": null,
+      "proteinG": null,
+      "waterL": null,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-04",
+      "steps": 10383,
+      "activeMinutes": 51,
+      "sleepHours": 7.5,
+      "restingHeartRate": 67,
+      "caloriesIn": 2150,
+      "proteinG": 65,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-05",
+      "steps": 7886,
+      "activeMinutes": 32,
+      "sleepHours": 6.4,
+      "restingHeartRate": 68,
+      "caloriesIn": 2065,
+      "proteinG": 77,
+      "waterL": 1.6,
+      "weightKg": 62.9
+    },
+    {
+      "date": "2026-10-06",
+      "steps": 8102,
+      "activeMinutes": 29,
+      "sleepHours": 5.8,
+      "restingHeartRate": 67,
+      "caloriesIn": 1898,
+      "proteinG": 73,
+      "waterL": 1.4,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-07",
+      "steps": 7613,
+      "activeMinutes": 28,
+      "sleepHours": 6.3,
+      "restingHeartRate": 66,
+      "caloriesIn": 1830,
+      "proteinG": 64,
+      "waterL": 1.3,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-08",
+      "steps": 7460,
+      "activeMinutes": 30,
+      "sleepHours": 6.6,
+      "restingHeartRate": 67,
+      "caloriesIn": 1835,
+      "proteinG": 73,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-09",
+      "steps": 8185,
+      "activeMinutes": 31,
+      "sleepHours": 6.5,
+      "restingHeartRate": 67,
+      "caloriesIn": 1846,
+      "proteinG": 62,
+      "waterL": 1.8,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-10",
+      "steps": 10543,
+      "activeMinutes": 51,
+      "sleepHours": 6.9,
+      "restingHeartRate": 66,
+      "caloriesIn": 1997,
+      "proteinG": 69,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-11",
+      "steps": 9718,
+      "activeMinutes": 43,
+      "sleepHours": 7.7,
+      "restingHeartRate": 68,
+      "caloriesIn": 2004,
+      "proteinG": 60,
+      "waterL": 1.4,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-12",
+      "steps": 7619,
+      "activeMinutes": 23,
+      "sleepHours": 5.6,
+      "restingHeartRate": 68,
+      "caloriesIn": 1712,
+      "proteinG": 61,
+      "waterL": 1.8,
+      "weightKg": 62.6
+    },
+    {
+      "date": "2026-10-13",
+      "steps": 6668,
+      "activeMinutes": 16,
+      "sleepHours": 5.6,
+      "restingHeartRate": 69,
+      "caloriesIn": 1876,
+      "proteinG": 65,
+      "waterL": 1.5,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-14",
+      "steps": 6776,
+      "activeMinutes": 22,
+      "sleepHours": 5.4,
+      "restingHeartRate": 67,
+      "caloriesIn": 1725,
+      "proteinG": 63,
+      "waterL": 1.7,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-15",
+      "steps": 6935,
+      "activeMinutes": 24,
+      "sleepHours": 5.4,
+      "restingHeartRate": 68,
+      "caloriesIn": 2068,
+      "proteinG": 77,
+      "waterL": 1.9,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-16",
+      "steps": 6145,
+      "activeMinutes": 18,
+      "sleepHours": 5.8,
+      "restingHeartRate": 68,
+      "caloriesIn": 1730,
+      "proteinG": 75,
+      "waterL": 1.8,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-17",
+      "steps": 11039,
+      "activeMinutes": 47,
+      "sleepHours": 7.5,
+      "restingHeartRate": 68,
+      "caloriesIn": 2215,
+      "proteinG": 76,
+      "waterL": 1.6,
+      "weightKg": null
+    },
+    {
+      "date": "2026-10-18",
+      "steps": 10335,
+      "activeMinutes": 54,
+      "sleepHours": 7.2,
+      "restingHeartRate": 67,
+      "caloriesIn": 1872,
+      "proteinG": 64,
+      "waterL": 1.4,
+      "weightKg": null
+    }
+  ],
+  "workouts": [
+    {
+      "date": "2026-08-25",
+      "type": "Yoga",
+      "durationMin": 50,
+      "distanceKm": null,
+      "caloriesBurned": 170
+    },
+    {
+      "date": "2026-08-29",
+      "type": "Running",
+      "durationMin": 21,
+      "distanceKm": 2.9,
+      "caloriesBurned": 179
+    },
+    {
+      "date": "2026-09-01",
+      "type": "Yoga",
+      "durationMin": 50,
+      "distanceKm": null,
+      "caloriesBurned": 170
+    },
+    {
+      "date": "2026-09-05",
+      "type": "Running",
+      "durationMin": 25,
+      "distanceKm": 3.5,
+      "caloriesBurned": 217
+    },
+    {
+      "date": "2026-09-06",
+      "type": "Swimming",
+      "durationMin": 40,
+      "distanceKm": 1,
+      "caloriesBurned": 280
+    },
+    {
+      "date": "2026-09-08",
+      "type": "Yoga",
+      "durationMin": 50,
+      "distanceKm": null,
+      "caloriesBurned": 170
+    },
+    {
+      "date": "2026-09-15",
+      "type": "Yoga",
+      "durationMin": 50,
+      "distanceKm": null,
+      "caloriesBurned": 170
+    },
+    {
+      "date": "2026-09-17",
+      "type": "Strength training",
+      "durationMin": 41,
+      "distanceKm": null,
+      "caloriesBurned": 214
+    },
+    {
+      "date": "2026-09-19",
+      "type": "Running",
+      "durationMin": 30,
+      "distanceKm": 4.1,
+      "caloriesBurned": 254
+    },
+    {
+      "date": "2026-09-20",
+      "type": "Swimming",
+      "durationMin": 40,
+      "distanceKm": 1,
+      "caloriesBurned": 280
+    },
+    {
+      "date": "2026-09-22",
+      "type": "Yoga",
+      "durationMin": 50,
+      "distanceKm": null,
+      "caloriesBurned": 170
+    },
+    {
+      "date": "2026-09-24",
+      "type": "Strength training",
+      "durationMin": 43,
+      "distanceKm": null,
+      "caloriesBurned": 222
+    },
+    {
+      "date": "2026-09-26",
+      "type": "Running",
+      "durationMin": 34,
+      "distanceKm": 4.6,
+      "caloriesBurned": 285
+    },
+    {
+      "date": "2026-09-29",
+      "type": "Yoga",
+      "durationMin": 50,
+      "distanceKm": null,
+      "caloriesBurned": 170
+    },
+    {
+      "date": "2026-10-01",
+      "type": "Strength training",
+      "durationMin": 45,
+      "distanceKm": null,
+      "caloriesBurned": 230
+    },
+    {
+      "date": "2026-10-04",
+      "type": "Swimming",
+      "durationMin": 40,
+      "distanceKm": 1,
+      "caloriesBurned": 280
+    },
+    {
+      "date": "2026-10-06",
+      "type": "Yoga",
+      "durationMin": 50,
+      "distanceKm": null,
+      "caloriesBurned": 170
+    },
+    {
+      "date": "2026-10-08",
+      "type": "Strength training",
+      "durationMin": 47,
+      "distanceKm": null,
+      "caloriesBurned": 238
+    },
+    {
+      "date": "2026-10-10",
+      "type": "Running",
+      "durationMin": 37,
+      "distanceKm": 5,
+      "caloriesBurned": 310
+    },
+    {
+      "date": "2026-10-13",
+      "type": "Yoga",
+      "durationMin": 50,
+      "distanceKm": null,
+      "caloriesBurned": 170
+    },
+    {
+      "date": "2026-10-15",
+      "type": "Strength training",
+      "durationMin": 49,
+      "distanceKm": null,
+      "caloriesBurned": 246
+    },
+    {
+      "date": "2026-10-17",
+      "type": "Running",
+      "durationMin": 40,
+      "distanceKm": 5.5,
+      "caloriesBurned": 341
+    },
+    {
+      "date": "2026-10-18",
+      "type": "Swimming",
+      "durationMin": 40,
+      "distanceKm": 1,
+      "caloriesBurned": 280
+    }
+  ]
+}

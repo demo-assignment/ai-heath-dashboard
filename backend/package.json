@@ -1,0 +1,33 @@
+{
+  "name": "health-insight-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env src/server.ts",
+    "start": "tsx --env-file-if-exists=.env src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/tests/*.test.ts",
+    "seed": "tsx scripts/generateData.ts",
+    "samples": "tsx scripts/generateSamples.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "test:runtime": "npm run build && node scripts/smokeBuild.mjs",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.5",
+    "hono": "^4.13.13",
+    "read-excel-file": "^9.3.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "write-excel-file": "^4.1.1"
+  }
+}
