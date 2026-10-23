@@ -13,10 +13,11 @@ interface TileProps {
   dashboard: Dashboard;
 }
 
-const StatusPill: FC<{ goal: GoalProgress; isDark?: boolean }> = ({ goal, isDark }) => (
-  <span
-    className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-bold ${isDark ? "bg-white/12 text-white" : "bg-white/70 text-ink"}`}
-  >
+// Same white chip on every tile, so labels stay readable over any artwork or colour.
+const BADGE = "rounded-full bg-white/90 text-ink shadow-sm";
+
+const StatusPill: FC<{ goal: GoalProgress }> = ({ goal }) => (
+  <span className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap px-2.5 py-1 text-[11px] font-bold ${BADGE}`}>
     <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[goal.status]}`} />
     {STATUS_LABEL[goal.status]}
   </span>
@@ -47,19 +48,15 @@ const TileHeader: FC<{
   icon: ReactNode;
   label: string;
   goal: GoalProgress;
-  isDark?: boolean;
-  hasBadge?: boolean;
 }> = props => {
-  const { icon, label, goal, isDark, hasBadge } = props;
+  const { icon, label, goal } = props;
   return (
     <div className="flex flex-wrap items-center justify-between gap-2">
-      <span
-        className={`flex items-center gap-2 whitespace-nowrap text-sm font-semibold ${hasBadge ? "rounded-full bg-white/90 py-1 pl-2 pr-3 shadow-sm" : ""}`}
-      >
+      <span className={`flex items-center gap-2 whitespace-nowrap py-1 pl-2 pr-3 text-sm font-semibold ${BADGE}`}>
         {icon}
         {label}
       </span>
-      <StatusPill goal={goal} isDark={isDark} />
+      <StatusPill goal={goal} />
     </div>
   );
 };
@@ -77,7 +74,7 @@ const StepsTile: FC<TileProps> = ({ goal, dashboard }) => {
 
   return (
     <article className="flex h-full flex-col rounded-[28px] bg-gradient-to-br from-[#ffb547] to-[#ff6b3d] p-5 text-white">
-      <TileHeader icon={<FootIcon />} label="Steps" goal={goal} isDark />
+      <TileHeader icon={<FootIcon className="text-orange-500" />} label="Steps" goal={goal} />
       <BigNumber value={formatNumber(goal.current)} suffix={`/ ${formatNumber(goal.target)} a day`} />
       <div className="relative mt-4 flex min-h-16 flex-1 items-end gap-1.5" aria-hidden>
         <span
@@ -147,7 +144,7 @@ const SleepTile: FC<TileProps> = ({ goal, dashboard }) => {
       </div>
 
       <div className="relative">
-        <TileHeader icon={<MoonIcon className="text-amber-200" />} label="Sleep" goal={goal} isDark />
+        <TileHeader icon={<MoonIcon className="text-indigo-500" />} label="Sleep" goal={goal} />
         <BigNumber value={formatNumber(goal.current, 1)} suffix={`h / ${goal.target} h a night`} />
         <p className="mt-1 text-xs text-indigo-200">
           <ChangeText goal={goal} isDark /> · {goal.detail.toLowerCase()}
@@ -256,7 +253,7 @@ const WaterTile: FC<TileProps> = ({ goal }) => {
       </div>
 
       <div className="relative">
-        <TileHeader icon={<span className="text-base">💧</span>} label="Water" goal={goal} hasBadge />
+        <TileHeader icon={<span className="text-base">💧</span>} label="Water" goal={goal} />
         <BigNumber value={formatNumber(goal.current, 1)} suffix={`/ ${formatNumber(goal.target, 1)} L`} />
       </div>
       <p className="relative mt-auto w-fit rounded-full bg-white/85 px-3 py-1.5 text-xs font-semibold">

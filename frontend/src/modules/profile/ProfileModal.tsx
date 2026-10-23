@@ -161,7 +161,7 @@ const ProfileModal: FC<ProfileModalProps> = props => {
                 <Select
                   id="profile-sex"
                   value={sex}
-                  onChange={event => setSex(event.target.value)}
+                  onChange={setSex}
                   className="mt-1"
                   options={[
                     { value: "female", label: "Female" },
