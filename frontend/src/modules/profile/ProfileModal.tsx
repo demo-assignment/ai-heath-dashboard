@@ -1,3 +1,4 @@
+import { toast } from "@/utils/toast";
 import { FC, FormEvent, useEffect, useState } from "react";
 import { useAppDispatch } from "@/app/hooks";
 import Mascot from "@/components/mascot/Mascot";
@@ -82,6 +83,7 @@ const ProfileModal: FC<ProfileModalProps> = props => {
     try {
       const result = await updateProfile(profile as never);
       dispatch(dashboardUpdated(result.dashboard));
+      toast.success("Profile saved. Your dashboard and Hearty now use it.");
       onClose();
     } catch (error) {
       if (error instanceof ApiError) {
@@ -91,8 +93,10 @@ const ProfileModal: FC<ProfileModalProps> = props => {
           ),
         );
         setFormError(error.message);
+        toast.error(error.message);
       } else {
         setFormError("Couldn't save your profile. Please try again.");
+        toast.error("Couldn't save your profile. Please try again.");
       }
     } finally {
       setIsSaving(false);
@@ -148,7 +152,12 @@ const ProfileModal: FC<ProfileModalProps> = props => {
           </button>
         </header>
 
-        <form onSubmit={submit} noValidate className="flex-1 space-y-5 overflow-y-auto px-5 py-5 sm:px-6">
+        <form
+          id="profile-form"
+          onSubmit={submit}
+          noValidate
+          className="min-h-0 flex-1 space-y-5 overflow-y-auto px-5 py-5 sm:px-6"
+        >
           <fieldset>
             <legend className="mb-2 text-sm font-semibold">About you</legend>
             <div className="grid grid-cols-2 gap-3">
@@ -188,15 +197,19 @@ const ProfileModal: FC<ProfileModalProps> = props => {
               {formError}
             </p>
           </WillRender>
+        </form>
 
+        {/* Outside the scroll area so the action is always visible; form="profile-form" keeps Enter-to-submit working. */}
+        <footer className="shrink-0 border-t border-line bg-white px-5 py-3 sm:px-6">
           <button
             type="submit"
+            form="profile-form"
             disabled={isSaving}
             className="w-full rounded-full bg-ink py-3 text-sm font-semibold text-white hover:bg-brand disabled:opacity-60"
           >
             {isSaving ? "Saving…" : "Save profile"}
           </button>
-        </form>
+        </footer>
       </section>
     </div>
   );

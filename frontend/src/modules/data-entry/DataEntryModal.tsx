@@ -1,3 +1,4 @@
+import { toast } from "@/utils/toast";
 import { FC, useEffect, useState } from "react";
 import { useAppDispatch } from "@/app/hooks";
 import Mascot from "@/components/mascot/Mascot";
@@ -47,6 +48,9 @@ const DataEntryModal: FC<DataEntryModalProps> = props => {
     if (result) {
       clearDashboardCache();
       dispatch(dashboardUpdated(result.dashboard));
+      toast.success("Back to the sample data.");
+    } else {
+      toast.error("Couldn't reset your data. Please try again.");
     }
     setIsConfirmingReset(false);
   };

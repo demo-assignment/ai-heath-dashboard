@@ -1,3 +1,4 @@
+import { toast } from "@/utils/toast";
 import { FC, FormEvent, useEffect, useState } from "react";
 import { useAppDispatch } from "@/app/hooks";
 import { dashboardUpdated } from "@/modules/dashboard/dashboardSlice";
@@ -64,6 +65,7 @@ const LogDayForm: FC<LogDayFormProps> = props => {
       setSavedMessage(
         `${result.updated ? "Updated" : "Saved"} ${formatDate(result.saved)}. Your dashboard and Hearty now use it.`,
       );
+      toast.success(`${result.updated ? "Updated" : "Saved"} ${formatDate(result.saved)}.`);
     } catch (error) {
       if (error instanceof ApiError) {
         setErrors(
@@ -72,8 +74,10 @@ const LogDayForm: FC<LogDayFormProps> = props => {
           ),
         );
         setFormError(error.message);
+        toast.error(error.message);
       } else {
         setFormError("Couldn't save this day. Please try again.");
+        toast.error("Couldn't save this day. Please try again.");
       }
     } finally {
       setIsSaving(false);

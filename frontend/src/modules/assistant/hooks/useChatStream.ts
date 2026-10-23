@@ -1,3 +1,4 @@
+import { toast } from "@/utils/toast";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/app/hooks";
 import { streamChat } from "@/services/chat.service";
@@ -286,14 +287,18 @@ export const useChatStream = () => {
         await deleteConversation(id);
         if (!mountedRef.current || stateRef.current.resetToken !== token) return;
         if (stateRef.current.activeId === id) dispatch(newConversationSelected());
+        toast.success("Conversation deleted.");
         await refreshHistory();
       } catch (error) {
         if (
           mountedRef.current &&
           stateRef.current.resetToken === token &&
           !(error instanceof ApiError && error.code === "STALE_REQUEST")
-        )
-          dispatch(historyFailed(error instanceof ApiError ? error.message : "Couldn't delete this conversation."));
+        ) {
+          const message = error instanceof ApiError ? error.message : "Couldn't delete this conversation.";
+          dispatch(historyFailed(message));
+          toast.error(message);
+        }
       } finally {
         if (mountedRef.current && stateRef.current.resetToken === token) setBusy(false);
       }

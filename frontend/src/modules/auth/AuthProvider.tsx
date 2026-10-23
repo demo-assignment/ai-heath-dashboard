@@ -1,3 +1,4 @@
+import { clearToasts, toast } from "@/utils/toast";
 import { createContext, FC, ReactNode, useCallback, useContext, useEffect, useRef, useState } from "react";
 import { ApiError, invalidateSessionRequests } from "@/api/client";
 import { getCurrentUser, login as loginRequest, logout as logoutRequest, SessionUser } from "@/services/auth.service";
@@ -21,6 +22,7 @@ const AuthContext = createContext<AuthContextValue | null>(null);
 
 const clearPrivateUi = (dispatch: ReturnType<typeof useAppDispatch>) => {
   invalidateSessionRequests();
+  clearToasts();
   dispatch(dashboardCleared());
   dispatch(conversationCleared());
   clearDashboardCache();
@@ -69,6 +71,7 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
       setUser(null);
       setErrorMessage("Your session expired. Please sign in again.");
       setStatus("anonymous");
+      toast.info("Your session expired. Please sign in again.");
     };
     window.addEventListener("hearty:unauthorized", expire);
     return () => window.removeEventListener("hearty:unauthorized", expire);
@@ -81,6 +84,7 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setUser(response.user);
     setErrorMessage("");
     setStatus("authenticated");
+    toast.success(`Welcome back, ${response.user.name.split(" ")[0]}!`);
   }, []);
 
   const logout = useCallback(async () => {
@@ -89,6 +93,7 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
     clearPrivateUi(dispatch);
     setUser(null);
     setStatus("anonymous");
+    toast.success("You're signed out.");
   }, [dispatch]);
 
   return (

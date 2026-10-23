@@ -1,3 +1,4 @@
+import { toast } from "@/utils/toast";
 import { FC, useState } from "react";
 import Avatar from "boring-avatars";
 import Mascot from "@/components/mascot/Mascot";
@@ -26,6 +27,7 @@ const TopBar: FC<TopBarProps> = props => {
       await logout();
     } catch {
       setLogoutError("We couldn't sign you out on the server. Please try again.");
+      toast.error("We couldn't sign you out on the server. Please try again.");
       setIsLoggingOut(false);
     }
   };

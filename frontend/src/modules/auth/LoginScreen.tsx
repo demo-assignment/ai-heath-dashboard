@@ -1,3 +1,4 @@
+import { toast } from "@/utils/toast";
 import { FC, FormEvent, useState } from "react";
 import Mascot from "@/components/mascot/Mascot";
 import { ApiError } from "@/api/client";
@@ -17,7 +18,9 @@ const LoginScreen: FC = () => {
     try {
       await login(username, password);
     } catch (reason) {
-      setError(reason instanceof ApiError ? reason.message : "We couldn't sign you in. Please try again.");
+      const message = reason instanceof ApiError ? reason.message : "We couldn't sign you in. Please try again.";
+      setError(message);
+      toast.error(message);
     } finally {
       setIsSubmitting(false);
     }

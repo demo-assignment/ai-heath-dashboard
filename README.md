@@ -142,7 +142,7 @@ Formatting uses Prettier with the shared `.prettierrc` (print width 120, `arrowP
 
 The backend also has `npm run test:runtime`: it compiles with TypeScript NodeNext, then imports the emitted JavaScript using plain Node (no tsx/bundler) and checks API/auth/dashboard/history/chat with the mock LLM. This catches deployment-only ESM import errors that tsx can hide. The smoke test does not call a real LLM or require a provider key.
 
-CI (`.github/workflows/ci.yml`) runs typecheck and tests for both apps on every push to `main` or `master` and on pull requests, plus production builds for both apps and a native Node runtime smoke test for the backend. Tests don't need an API key or network: the LLM is replaced by a fake stream and the Excel files are fixtures in `backend/src/tests/fixtures`.
+CI (`.github/workflows/ci.yml`) runs typecheck and tests for both apps on every push to `master` and on pull requests, plus production builds for both apps and a native Node runtime smoke test for the backend. Tests don't need an API key or network: the LLM is replaced by a fake stream and the Excel files are fixtures in `backend/src/tests/fixtures`.
 
 ---
 

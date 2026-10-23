@@ -1,3 +1,4 @@
+import { toast } from "@/utils/toast";
 import { ChangeEvent, DragEvent, FC, useRef, useState } from "react";
 import { useAppDispatch } from "@/app/hooks";
 import { dashboardUpdated } from "@/modules/dashboard/dashboardSlice";
@@ -66,8 +67,14 @@ const ExcelImport: FC = () => {
       const response = await importSpreadsheet(file);
       dispatch(dashboardUpdated(response.dashboard));
       setResult({ type: "success", imported: response.imported, skipped: response.skipped });
+      toast.success(
+        response.imported.length
+          ? `Imported ${response.imported.length} day${response.imported.length > 1 ? "s" : ""}.`
+          : "No new days to import.",
+      );
       clearFile();
     } catch (error) {
+      toast.error(error instanceof ApiError ? error.message : "Upload failed. Please try again.");
       setResult({
         type: "error",
         message: error instanceof ApiError ? error.message : "Upload failed. Please try again.",
