@@ -246,6 +246,34 @@ sample data (device, up to 18 Oct)  +  manual entries (19 Oct → today)  →  o
 
 ## 8) Architecture
 
+### Request flow
+
+GitHub draws this diagram from the Mermaid source below.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant B as Browser (React + Redux)
+    participant A as Hono API
+    participant L as LLM provider
+
+    B->>A: GET /api/health/dashboard
+    Note right of A: insights.service computes weekly totals,<br/>goal progress, focus areas, missing days
+    A-->>B: JSON dashboard
+
+    B->>A: POST /api/chat (conversationId + message)
+    Note right of A: validate, rate limit, build the system prompt<br/>from the same insights as the dashboard
+    A->>L: stream: true + tools
+    L-->>A: tool_calls (for example a day like 3 Oct)
+    A-->>B: SSE status
+    Note right of A: run the tool in code
+    A->>L: tool result
+    L-->>A: answer tokens
+    A-->>B: SSE delta (many events)
+    Note right of A: grounding check on the full answer
+    A-->>B: SSE meta, done
+```
+
 ### Authentication
 
 1. FE sends username/password over HTTPS to POST /api/auth/login. It does not pre-hash the password: a client hash would itself become a reusable credential.
@@ -255,26 +283,6 @@ sample data (device, up to 18 Oct)  +  manual entries (19 Oct → today)  →  o
 5. POST /api/auth/logout expires the cookie; FE clears Redux conversation/dashboard and localStorage. Late responses are discarded after a session change.
 
 The session is stateless: signing keys must be stable across instances. Logout removes the browser cookie but does not revoke a copied cookie on the server; it remains valid until expiry or key rotation. Login has a separate in-memory limit (10 attempts per 10 minutes/IP). Credentialed writes validate Origin; CORS is configured with exact origins. These are demo safeguards, not production-grade identity management.
-
-
-```
-Browser (React + Redux)                    Hono API                         LLM provider
-───────────────────────                    ────────                         ────────────
-Dashboard ── GET /api/health/dashboard ──▶ insights.service
-                                           (weekly totals, goal progress,
-                                            focus areas, missing days)
-            ◀─────────── JSON ────────────
-
-Assistant ── POST /api/chat ─────────────▶ validate + rate limit
-            { conversationId, message }     build system prompt from the
-                                           same insights as the dashboard
-                                           ── stream: true, tools ────────▶
-                                           ◀── tool_calls (e.g. 3 Oct) ─────
-            ◀── SSE: status ────────────── run the tool in code
-                                           ── tool result ────────────────▶
-            ◀── SSE: delta … ───────────── ◀── answer tokens ───────────────
-            ◀── SSE: meta, done ────────── grounding check on the full answer
-```
 
 Main decisions:
 
